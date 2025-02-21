@@ -6,3 +6,4 @@ print(bs.find('h1'))
 # print(bs.h1)
 # print(bs.h1.string)
 print(bs.h1.text)
+# a태그에 접근

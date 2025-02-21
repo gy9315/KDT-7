@@ -11,7 +11,7 @@ html_example = '''
     <p>Paragraph</p>
     <span class="red">BeautifulSoup Library Examples!</span>
     <div id="link">
-        <a class="external_link" href="www.google.com">google</a>
+        <a class="external_link external_link2" href="www.google.com">google</a>
         <div id="class1">
             <p id="first">class1's first paragraph</p>
             <a class="external_link" href="www.naver.com">naver</a>
@@ -32,3 +32,14 @@ html_example = '''
 
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html_example, 'html.parser')
+print(soup.title)
+print(soup.title.string)
+# parent  해당 태그를 포함하고 있는 부모
+print(soup.title.parent)
+# print(soup.body.text)
+# a태그에 접근
+print(soup.a)
+print(soup.a.text)
+print(soup.a['href'])
+# 여러가지의 class가 존재 시에는 list값으로 반환
+print(soup.a['class'])
